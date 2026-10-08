@@ -1,0 +1,4901 @@
+/* =====================================================
+   LES CABRES DE SANT PROCOPI
+   ESTIL GENERAL DE LA WEB
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+
+/* =====================================================
+   CONFIGURACIÓ GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #080808;
+    color: white;
+}
+
+
+/* =====================================================
+   CAPÇALERA / MENÚ
+===================================================== */
+
+.capcalera {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 5%;
+
+    z-index: 100;
+
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0));
+}
+
+.logo {
+    display: block;
+}
+
+.logo img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+
+    transition: 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.08);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff8c00;
+
+    transform: translateY(-2px);
+}
+
+.menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 3px;
+
+    border-radius: 5px;
+
+    background-color: #ff8c00;
+
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   PORTADA - INICI
+===================================================== */
+
+.portada {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.9)),
+        url("../imatges/foto1.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.contingut-portada {
+    padding: 140px 20px 70px;
+
+    max-width: 1100px;
+}
+
+.logo-portada {
+    width: 250px;
+    max-width: 65vw;
+
+    margin-bottom: 25px;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255, 140, 0, 0.5)) drop-shadow(0 0 30px rgba(255, 140, 0, 0.25));
+
+    transition: 0.4s;
+}
+
+.logo-portada:hover {
+    transform: scale(1.05);
+
+    filter:
+        drop-shadow(0 0 15px rgba(255, 140, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 140, 0, 0.5));
+}
+
+.portada h1 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(55px, 9vw, 115px);
+
+    font-weight: 400;
+
+    letter-spacing: 5px;
+
+    line-height: 0.95;
+
+    color: white;
+
+    text-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.9),
+        0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.subtitol {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(20px, 3vw, 32px);
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    margin-top: 25px;
+    margin-bottom: 40px;
+
+    color: #ff9d2e;
+
+    text-shadow:
+        0 0 10px rgba(255, 140, 0, 0.4);
+}
+
+
+/* =====================================================
+   BOTONS
+===================================================== */
+
+.botons-portada {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.boto {
+    display: inline-block;
+
+    padding: 16px 34px;
+
+    background-color: #ff7800;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.boto:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    background-color: #ff9d2e;
+
+    box-shadow:
+        0 0 12px #ff7800,
+        0 0 30px rgba(255, 120, 0, 0.5),
+        0 0 60px rgba(255, 120, 0, 0.2);
+}
+
+.boto-secundari {
+    background-color: rgba(0, 0, 0, 0.25);
+
+    border: 2px solid #ff7800;
+
+    backdrop-filter: blur(5px);
+}
+
+.boto-secundari:hover {
+    background-color: #ff7800;
+}
+
+
+/* =====================================================
+   PRESENTACIÓ
+===================================================== */
+
+.presentacio {
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 110px 20px;
+}
+
+.presentacio h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 65px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+    color: #ff8c00;
+}
+
+.presentacio p {
+    font-size: 18px;
+
+    font-weight: 500;
+
+    line-height: 1.8;
+
+    margin-bottom: 12px;
+
+    color: #dddddd;
+}
+
+
+/* =====================================================
+   TARGETES
+===================================================== */
+
+.apartats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 20px;
+}
+
+.targeta {
+    padding: 45px 30px;
+
+    background-color: #111111;
+
+    border: 1px solid #292929;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.35s;
+}
+
+.targeta:hover {
+    transform: translateY(-10px);
+
+    border-color: #ff7800;
+
+    box-shadow:
+        0 0 20px rgba(255, 120, 0, 0.2),
+        0 0 45px rgba(255, 120, 0, 0.08);
+}
+
+.icona {
+    font-size: 50px;
+
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+.targeta h3 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 38px;
+
+    letter-spacing: 2px;
+
+    color: #ff8c00;
+
+    margin-bottom: 12px;
+}
+
+.targeta p {
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #cccccc;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   BOTIGA
+===================================================== */
+
+.seccio-botiga {
+    text-align: center;
+
+    margin-top: 100px;
+
+    padding: 120px 20px;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.92)),
+        url("../imatges/foto2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.seccio-botiga h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 70px;
+
+    letter-spacing: 3px;
+
+    color: #ff8c00;
+
+    margin-bottom: 15px;
+}
+
+.seccio-botiga p {
+    font-size: 18px;
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   PÀGINES INTERIORS
+===================================================== */
+
+.pagina {
+    padding-top: 120px;
+}
+
+
+/* =====================================================
+   CAPÇALERA DE LES PÀGINES
+===================================================== */
+
+.capcalera-pagina {
+    min-height: 45vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.9)),
+        url("../imatges/foto3.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.capcalera-pagina h1 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(60px, 10vw, 110px);
+
+    letter-spacing: 5px;
+
+    line-height: 1;
+
+    color: white;
+
+    text-shadow:
+        0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.capcalera-pagina p {
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    color: #ff9d2e;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   ASSOCIACIÓ
+===================================================== */
+
+.contingut-associacio {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 100px 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.text-associacio h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 65px;
+
+    letter-spacing: 3px;
+
+    color: #ff8c00;
+
+    margin-bottom: 25px;
+}
+
+.text-associacio p {
+    color: #dddddd;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.imatge-associacio {
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    border: 1px solid #333;
+
+    box-shadow:
+        0 0 30px rgba(255, 120, 0, 0.1);
+}
+
+.imatge-associacio img {
+    width: 100%;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+.imatge-associacio:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =====================================================
+   FOC I TRADICIÓ
+===================================================== */
+
+.seccio-foc {
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 80px 25px 110px;
+}
+
+.seccio-foc h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 70px;
+
+    letter-spacing: 3px;
+
+    color: #ff8c00;
+
+    margin-bottom: 20px;
+}
+
+.seccio-foc p {
+    color: #cccccc;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.enllacos {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 0 25px 100px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   CALENDARI
+===================================================== */
+
+.zona-calendari {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 25px;
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.8fr;
+
+    gap: 40px;
+
+    align-items: start;
+}
+
+.calendari {
+    background-color: #111111;
+
+    border: 1px solid #292929;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 0 30px rgba(255, 120, 0, 0.08);
+}
+
+.capcalera-calendari {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.capcalera-calendari h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 45px;
+
+    letter-spacing: 2px;
+
+    color: white;
+
+    text-align: center;
+}
+
+.boto-calendari {
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 2px solid #ff7800;
+
+    background-color: transparent;
+
+    color: #ff7800;
+
+    font-size: 35px;
+
+    line-height: 35px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boto-calendari:hover {
+    background-color: #ff7800;
+
+    color: white;
+
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 20px rgba(255, 120, 0, 0.5);
+}
+
+.dies-setmana {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+}
+
+.dies-setmana div {
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    color: #ff8c00;
+
+    padding: 10px 0;
+}
+
+.dies-calendari {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 8px;
+}
+
+
+/* =====================================================
+   DIES CALENDARI
+===================================================== */
+
+.dia {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    border: 1px solid #292929;
+
+    background-color: #181818;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-sizing: border-box;
+}
+
+.dia:hover {
+    background-color: #ff7800;
+
+    border-color: #ff7800;
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(255, 120, 0, 0.35);
+}
+
+.dia.buit {
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+.dia.avui {
+    border: 2px solid #ff9d2e;
+
+    color: #ff9d2e;
+}
+
+
+/* =====================================================
+   ACTIVITATS DEL CALENDARI
+===================================================== */
+
+.dia.te-activitat {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    background: #ff7800;
+
+    color: #000;
+
+    border: 3px solid #ff9d2e;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 0 20px rgba(255, 120, 0, 0.65);
+}
+
+.dia.te-activitat:hover {
+    background: #ff9d2e;
+
+    transform: scale(1.06);
+
+    box-shadow:
+        0 0 25px rgba(255, 120, 0, 0.75);
+}
+
+
+/* ACTIVITAT FUTURA */
+
+.dia.activitat-futura {
+    background: #ff7800;
+
+    color: #000;
+
+    border: 3px solid #ff9d2e;
+
+    opacity: 1;
+}
+
+
+/* ACTIVITAT PASSADA */
+
+.dia.activitat-passada {
+    background: #3a3a3a;
+
+    color: #999;
+
+    border: 2px solid #555;
+
+    box-shadow: none;
+
+    opacity: 0.65;
+}
+
+.dia.activitat-passada:hover {
+    background: #4a4a4a;
+
+    transform: scale(1.04);
+
+    opacity: 0.85;
+}
+
+
+/* TEXT DINS DEL QUADRAT */
+
+.dia .estat-activitat {
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 7px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: 0;
+
+    pointer-events: none;
+}
+
+.dia.activitat-futura .estat-activitat {
+    color: #000;
+}
+
+.dia.activitat-passada .estat-activitat {
+    color: #aaa;
+}
+
+
+/* =====================================================
+   INFORMACIÓ DEL CALENDARI
+===================================================== */
+
+.informacio-activitat {
+    background-color: #111111;
+
+    border: 1px solid #292929;
+
+    border-radius: 20px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    min-height: 280px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.informacio-activitat:hover {
+    border-color: #ff7800;
+
+    box-shadow:
+        0 0 25px rgba(255, 120, 0, 0.12);
+}
+
+.icona-calendari {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.informacio-activitat h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 40px;
+
+    letter-spacing: 2px;
+
+    color: #ff8c00;
+
+    margin-bottom: 15px;
+}
+
+.informacio-activitat p {
+    color: #cccccc;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+.detalls-activitat {
+    width: 100%;
+
+    text-align: left;
+
+    margin: 15px 0;
+}
+
+.detalls-activitat p {
+    padding: 8px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+.detalls-activitat strong {
+    color: #ff9d2e;
+}
+
+.descripcio-activitat {
+    margin-top: 10px;
+
+    text-align: left;
+}
+
+.boto-calendari-enllac {
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   PEU DE PÀGINA
+===================================================== */
+
+footer {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background-color: #050505;
+
+    color: #888888;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   PÀGINA CORREFOC
+===================================================== */
+
+.hero-correfoc {
+    min-height: 85vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 150px 25px 100px;
+
+    position: relative;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.95)),
+        url("../imatges/foto3.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-correfoc::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(255, 120, 0, 0.18),
+            transparent 55%);
+
+    pointer-events: none;
+}
+
+.hero-correfoc-contingut {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1000px;
+}
+
+.etiqueta-correfoc {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border: 1px solid #ff7800;
+
+    border-radius: 50px;
+
+    color: #ff9d2e;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.hero-correfoc h1 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(90px,
+            17vw,
+            200px);
+
+    line-height: 0.8;
+
+    letter-spacing: 8px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 35px rgba(255, 120, 0, 0.4),
+        0 10px 30px rgba(0, 0, 0, 0.9);
+}
+
+.subtitol-correfoc {
+    margin-top: 35px;
+
+    margin-bottom: 50px;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #ff9d2e;
+}
+
+.info-correfoc {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.info-item {
+    min-width: 220px;
+
+    padding: 20px 25px;
+
+    background: rgba(10, 10, 10, 0.8);
+
+    border: 1px solid #333;
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.info-item span {
+    font-size: 27px;
+}
+
+.info-item strong {
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    color: white;
+}
+
+.contingut-correfoc {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 120px 25px;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.petit-titol {
+    color: #ff8c00;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+.text-correfoc h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 80px;
+
+    line-height: 0.9;
+
+    letter-spacing: 3px;
+
+    margin: 15px 0 30px;
+}
+
+.text-correfoc p {
+    color: #cccccc;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+.text-correfoc strong {
+    color: #ff9d2e;
+}
+
+.targeta-dades-correfoc {
+    background: #111111;
+
+    border: 1px solid #292929;
+
+    border-radius: 20px;
+
+    padding: 40px 30px;
+
+    box-shadow:
+        0 0 35px rgba(255,
+            120,
+            0,
+            0.08);
+}
+
+.icona-foc {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+.targeta-dades-correfoc h3 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    color: #ff8c00;
+
+    font-size: 40px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.dada-correfoc {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+.dada-correfoc:last-child {
+    border-bottom: none;
+}
+
+.dada-correfoc span {
+    color: #777;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.dada-correfoc strong {
+    color: white;
+
+    font-size: 15px;
+}
+
+.seccio-dj {
+    min-height: 55vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.9)),
+        url("../imatges/foto2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.dj-contingut {
+    max-width: 850px;
+}
+
+.dj-contingut h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(80px,
+            12vw,
+            150px);
+
+    line-height: 0.9;
+
+    letter-spacing: 5px;
+
+    margin: 20px 0;
+
+    color: white;
+
+    text-shadow:
+        0 0 30px rgba(255,
+            120,
+            0,
+            0.4);
+}
+
+.dj-contingut p {
+    font-size: 20px;
+
+    color: #cccccc;
+
+    margin-bottom: 30px;
+}
+
+.dj-etiqueta {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    background: #ff7800;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.tornar-calendari {
+    text-align: center;
+
+    padding: 110px 25px;
+}
+
+.tornar-calendari h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 65px;
+
+    letter-spacing: 3px;
+
+    color: #ff8c00;
+
+    margin-bottom: 15px;
+}
+
+.tornar-calendari p {
+    color: #cccccc;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   CABRATAST
+===================================================== */
+
+.hero-cabratast {
+    min-height: 75vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.70),
+            rgba(0, 0, 0, 0.88)),
+        url("../imatges/foto2.jpg") center/cover no-repeat;
+}
+
+.hero-cabratast::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(255, 90, 0, 0.20),
+            transparent 55%);
+
+    pointer-events: none;
+}
+
+.hero-cabratast-contingut {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1000px;
+}
+
+.etiqueta-cabratast {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    color: #ff6500;
+}
+
+.hero-cabratast h1 {
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(80px,
+            14vw,
+            190px);
+
+    line-height: 0.85;
+
+    letter-spacing: 4px;
+
+    color: white;
+}
+
+.subtitol-cabratast {
+    margin: 25px 0 40px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #dddddd;
+}
+
+.info-cabratast {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+.info-cabratast .info-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 22px;
+
+    border: 1px solid rgba(255,
+            101,
+            0,
+            0.5);
+
+    background: rgba(0,
+            0,
+            0,
+            0.65);
+}
+
+.info-cabratast .info-item span {
+    font-size: 20px;
+}
+
+.info-cabratast .info-item strong {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: white;
+}
+
+.activitat-passada {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 10px 22px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    border: 1px solid #777;
+
+    color: #bbbbbb;
+}
+
+.contingut-cabratast {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 100px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.text-cabratast h2 {
+    margin: 10px 0 30px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 70px;
+
+    letter-spacing: 2px;
+}
+
+.text-cabratast p {
+    margin-bottom: 20px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #cccccc;
+}
+
+.text-cabratast strong {
+    color: white;
+}
+
+.targeta-dades-cabratast {
+    padding: 45px 35px;
+
+    background: #111;
+
+    border: 1px solid #2b2b2b;
+
+    text-align: center;
+}
+
+.icona-cabratast {
+    font-size: 60px;
+
+    margin-bottom: 10px;
+}
+
+.targeta-dades-cabratast h3 {
+    margin-bottom: 30px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 35px;
+
+    letter-spacing: 2px;
+}
+
+.dada-cabratast {
+    padding: 18px 0;
+
+    border-top: 1px solid #292929;
+}
+
+.dada-cabratast span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #888;
+}
+
+.dada-cabratast strong {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+
+    color: white;
+}
+
+.seccio-vespreig {
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 90px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.85)),
+        url("../imatges/foto3.jpg") center/cover no-repeat;
+}
+
+.vespreig-contingut {
+    max-width: 800px;
+}
+
+.vespreig-contingut h2 {
+    margin: 10px 0 20px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 90px;
+
+    letter-spacing: 3px;
+
+    color: white;
+}
+
+.vespreig-contingut p {
+    margin-bottom: 30px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #ddd;
+}
+
+
+/* =====================================================
+   PÀGINA ACTIVITATS
+===================================================== */
+
+/* =====================================================
+   FONS DE LA PÀGINA ACTIVITATS
+===================================================== */
+
+.pagina-activitats {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+
+    min-height: 100vh;
+
+    padding: 150px 5% 100px;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.92)),
+        url("../imatges/foto3.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+
+/* CAPÇALERA */
+
+.capcalera-activitats {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.capcalera-activitats .petit-titol {
+    color: #ff7800;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.capcalera-activitats h1 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(60px,
+            9vw,
+            110px);
+
+    color: white;
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+}
+
+.capcalera-activitats p {
+    max-width: 700px;
+
+    margin: 20px auto 0;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* LLISTA */
+
+.llista-activitats {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 50px;
+}
+
+
+/* TARGETA */
+
+.targeta-activitat {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #111;
+
+    border: 1px solid #292929;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.targeta-activitat:hover {
+    border-color: #ff7800;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px rgba(255,
+            120,
+            0,
+            0.18);
+}
+
+
+/* IMATGE */
+
+.imatge-activitat {
+    min-height: 430px;
+
+    overflow: hidden;
+}
+
+.imatge-activitat img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s ease;
+}
+
+.targeta-activitat:hover .imatge-activitat img {
+    transform: scale(1.05);
+}
+
+
+/* CONTINGUT */
+
+.contingut-activitat {
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.etiqueta-activitat {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 7px 12px;
+
+    background: #ff7800;
+
+    color: #000;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.contingut-activitat h2 {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(45px,
+            5vw,
+            70px);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.contingut-activitat .data-activitat,
+.contingut-activitat .hora-activitat,
+.contingut-activitat .lloc-activitat {
+    margin: 5px 0;
+
+    color: #ddd;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+.contingut-activitat .descripcio-activitat {
+    margin: 25px 0;
+
+    color: #999;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+    text-align: left;
+}
+
+.targeta-activitat .boto {
+    width: fit-content;
+
+    padding: 13px 22px;
+
+    font-size: 13px;
+
+    border-radius: 50px;
+}
+
+.targeta-propera {
+    grid-template-columns: 1fr;
+
+    border-style: dashed;
+
+    border-color: #444;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(255, 120, 0, 0.08),
+            transparent 60%);
+}
+
+.targeta-propera .contingut-activitat {
+    text-align: center;
+
+    align-items: center;
+
+    min-height: 300px;
+}
+
+
+/* =====================================================
+   MÒBIL
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .capcalera {
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 65px;
+
+        height: 65px;
+    }
+
+    .menu {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .apartats {
+        grid-template-columns: 1fr;
+    }
+
+    .portada h1 {
+        font-size: clamp(50px,
+                15vw,
+                80px);
+
+        letter-spacing: 2px;
+    }
+
+    .subtitol {
+        font-size: 18px;
+
+        letter-spacing: 3px;
+    }
+
+    .presentacio h2 {
+        font-size: 52px;
+    }
+
+    .seccio-botiga h2 {
+        font-size: 55px;
+    }
+
+    .contingut-associacio {
+        grid-template-columns: 1fr;
+
+        padding: 70px 20px;
+    }
+
+    .text-associacio h2 {
+        font-size: 55px;
+    }
+
+    .seccio-foc h2 {
+        font-size: 55px;
+    }
+
+    .enllacos {
+        grid-template-columns: 1fr;
+    }
+
+    .zona-calendari {
+        grid-template-columns: 1fr;
+
+        padding: 70px 20px;
+    }
+
+    .calendari {
+        padding: 20px;
+    }
+
+    .capcalera-calendari h2 {
+        font-size: 35px;
+    }
+
+    .boto-calendari {
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 28px;
+    }
+
+    .dia {
+        font-size: 13px;
+
+        border-radius: 7px;
+    }
+
+    .hero-correfoc {
+        min-height: 80vh;
+
+        padding-top: 170px;
+    }
+
+    .hero-correfoc h1 {
+        font-size: 90px;
+
+        letter-spacing: 4px;
+    }
+
+    .subtitol-correfoc {
+        font-size: 16px;
+    }
+
+    .info-correfoc {
+        flex-direction: column;
+    }
+
+    .info-item {
+        width: 100%;
+    }
+
+    .contingut-correfoc {
+        grid-template-columns: 1fr;
+
+        padding: 80px 20px;
+
+        gap: 45px;
+    }
+
+    .text-correfoc h2 {
+        font-size: 60px;
+    }
+
+    .seccio-dj {
+        min-height: 50vh;
+    }
+
+    .tornar-calendari h2 {
+        font-size: 50px;
+    }
+
+    .hero-cabratast {
+        min-height: 80vh;
+
+        padding: 80px 20px;
+    }
+
+    .hero-cabratast h1 {
+        font-size: 90px;
+    }
+
+    .subtitol-cabratast {
+        font-size: 16px;
+    }
+
+    .info-cabratast {
+        flex-direction: column;
+    }
+
+    .info-cabratast .info-item {
+        justify-content: center;
+    }
+
+    .contingut-cabratast {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 70px 20px;
+    }
+
+    .text-cabratast h2 {
+        font-size: 55px;
+    }
+
+    .vespreig-contingut h2 {
+        font-size: 70px;
+    }
+
+    .pagina-activitats {
+        width: 92%;
+
+        padding: 120px 0 50px;
+    }
+
+    .capcalera-activitats {
+        margin-bottom: 45px;
+    }
+
+    .targeta-activitat {
+        grid-template-columns: 1fr;
+    }
+
+    .imatge-activitat {
+        min-height: 280px;
+
+        max-height: 320px;
+    }
+
+    .contingut-activitat {
+        padding: 30px;
+    }
+
+    .contingut-activitat h2 {
+        font-size: 48px;
+    }
+
+    .targeta-propera .contingut-activitat {
+        min-height: 260px;
+    }
+
+}
+
+/* ========================================
+   ETIQUETES D'ACTIVITATS
+======================================== */
+
+.etiqueta-activitat {
+    display: inline-block;
+    margin: 10px 0 15px;
+    padding: 7px 14px;
+
+    border-radius: 999px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* PRÒXIMA ACTIVITAT */
+
+.etiqueta-proxima {
+    background: #ff1900;
+    color: #ffffff;
+
+    border: 2px solid #ff9d2e;
+
+    box-shadow:
+        0 0 12px rgba(255, 120, 0, 0.45);
+}
+
+
+/* ACTIVITAT REALITZADA */
+
+.etiqueta-passada {
+    background: #333;
+    color: #aaa;
+
+    border: 1px solid #555;
+
+    opacity: 0.8;
+}
+
+
+/* Mòbil */
+
+@media (max-width: 850px) {
+
+    .etiqueta-activitat {
+        font-size: 9px;
+        padding: 6px 11px;
+        margin: 8px 0 12px;
+    }
+
+}
+
+/* ========================================
+   BOTIGA
+======================================== */
+
+.botiga {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+
+.botiga-introduccio {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.botiga-introduccio h2 {
+    margin: 0 0 10px;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+
+.botiga-introduccio p {
+    color: #aaa;
+    font-size: 16px;
+}
+
+
+/* ========================================
+   GRAELLA DE PRODUCTES
+======================================== */
+
+.graella-productes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* ========================================
+   TARGETA PRODUCTE
+======================================== */
+
+.producte {
+    background: #181818;
+
+    border: 1px solid #292929;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    transition: 0.25s;
+}
+
+
+.producte:hover {
+    transform: translateY(-6px);
+
+    border-color: #ff7800;
+
+    box-shadow:
+        0 10px 30px rgba(255, 120, 0, 0.20);
+}
+
+
+/* FOTO PRODUCTE */
+
+.producte-imatge {
+    width: 100%;
+    height: 240px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: #111;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.producte-imatge img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+.producte-imatge .sense-foto {
+    color: #555;
+
+    font-size: 50px;
+}
+
+
+/* NOM */
+
+.producte h3 {
+    margin: 10px 0;
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: 28px;
+
+    letter-spacing: 1px;
+}
+
+
+/* PREU */
+
+.preu-producte {
+    color: #ff7800;
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   OPCIONS
+======================================== */
+
+.opcio-producte {
+    margin-bottom: 18px;
+
+    text-align: left;
+}
+
+
+.opcio-producte label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+
+.opcio-producte select {
+    width: 100%;
+
+    padding: 12px;
+
+    background: #101010;
+
+    color: white;
+
+    border: 1px solid #444;
+
+    border-radius: 7px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+.opcio-producte select:focus {
+    outline: none;
+
+    border-color: #ff7800;
+}
+
+
+/* ========================================
+   BOTÓ AFEGIR
+======================================== */
+
+.boto-afegir {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ff7800;
+
+    color: #000;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.boto-afegir:hover {
+    background: #ff9d2e;
+
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 18px rgba(255, 120, 0, 0.45);
+}
+
+
+/* ========================================
+   BOTÓ FLOTANT CARRÉT
+======================================== */
+
+.boto-carret {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 65px;
+    height: 65px;
+
+    border: 2px solid #ff9d2e;
+
+    border-radius: 50%;
+
+    background: #ff7800;
+
+    color: #000;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 0 25px rgba(255, 120, 0, 0.45);
+
+    transition: 0.25s;
+}
+
+
+.boto-carret:hover {
+    transform: scale(1.08);
+}
+
+
+/* NÚMERO */
+
+#numero-carret {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 23px;
+    height: 23px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: red;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 900;
+}
+
+
+/* ========================================
+   CARRÉT LATERAL
+======================================== */
+
+.carret {
+    position: fixed;
+
+    top: 0;
+    right: -420px;
+
+    width: 390px;
+    max-width: 90vw;
+
+    height: 100vh;
+
+    background: #111;
+
+    border-left: 1px solid #333;
+
+    z-index: 1100;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: right 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+.carret.obert {
+    right: 0;
+}
+
+
+/* CAPÇALERA */
+
+.carret-capcalera {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px;
+
+    border-bottom: 1px solid #333;
+}
+
+
+.carret-capcalera h2 {
+    margin: 0;
+
+    font-size: 20px;
+}
+
+
+.tancar-carret {
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   PRODUCTES DEL CARRÉT
+======================================== */
+
+.productes-carret {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px;
+}
+
+
+.carret-buit {
+    text-align: center;
+
+    color: #777;
+
+    margin-top: 50px;
+}
+
+
+/* ITEM */
+
+.item-carret {
+    padding: 15px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+
+.item-carret-nom {
+    font-weight: 800;
+
+    margin-bottom: 6px;
+}
+
+
+.item-carret-opcio {
+    color: #999;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+}
+
+
+.item-carret-linia {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.item-carret-preu {
+    color: #ff7800;
+
+    font-weight: 900;
+}
+
+
+/* ========================================
+   QUANTITAT
+======================================== */
+
+.quantitat {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.quantitat button {
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid #444;
+
+    border-radius: 5px;
+
+    background: #222;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 900;
+}
+
+
+.quantitat button:hover {
+    background: #ff7800;
+
+    color: #000;
+}
+
+
+.quantitat span {
+    min-width: 20px;
+
+    text-align: center;
+
+    font-weight: 800;
+}
+
+
+/* ELIMINAR */
+
+.eliminar-producte {
+    margin-top: 10px;
+
+    padding: 5px 0;
+
+    border: none;
+
+    background: none;
+
+    color: #888;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.eliminar-producte:hover {
+    color: #ff5555;
+}
+
+
+/* ========================================
+   TOTAL
+======================================== */
+
+.carret-total {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 25px;
+
+    border-top: 1px solid #333;
+}
+
+
+.carret-total span {
+    font-weight: 800;
+}
+
+
+.carret-total strong {
+    color: #ff7800;
+
+    font-size: 22px;
+}
+
+
+/* ========================================
+   FER COMANDA
+======================================== */
+
+.boto-comanda {
+    width: calc(100% - 50px);
+
+    margin: 0 25px 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ff7800;
+
+    color: #000;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.boto-comanda:hover {
+    background: #ff9d2e;
+
+    transform: scale(1.02);
+}
+
+
+/* ========================================
+   FONS FOSC
+======================================== */
+
+.fons-carret {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 1050;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+
+.fons-carret.obert {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* ========================================
+   MÒBIL
+======================================== */
+
+@media (max-width: 850px) {
+
+    .graella-productes {
+        grid-template-columns: 1fr;
+    }
+
+
+    .botiga {
+        width: 92%;
+
+        padding-top: 45px;
+    }
+
+
+    .botiga-introduccio h2 {
+        font-size: 32px;
+    }
+
+
+    .producte-imatge {
+        height: 220px;
+    }
+
+
+    .boto-carret {
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
+
+/* ===============================
+   IMATGES DELS PRODUCTES
+   =============================== */
+
+.imatge-producte {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #111;
+    border-radius: 12px;
+}
+
+.imatge-producte img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 850px) {
+
+    .imatge-producte {
+        height: 220px;
+    }
+
+}
+
+/* =========================================
+   PÀGINA DE CONTACTE
+   ========================================= */
+
+.contacte {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 25px;
+}
+
+.contacte h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 42px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.contacte-introduccio {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+
+/* INFORMACIÓ DE CONTACTE */
+
+.contacte-graella {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.targeta-contacte {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: #181818;
+    border: 1px solid #292929;
+    border-radius: 14px;
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.targeta-contacte:hover {
+    transform: translateY(-4px);
+    border-color: #ff7800;
+    box-shadow: 0 0 20px rgba(255, 120, 0, 0.25);
+}
+
+.icona-contacte {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff7800;
+    border-radius: 12px;
+    font-size: 26px;
+}
+
+.targeta-contacte span {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.targeta-contacte strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+
+/* PARTICIPAR */
+
+.contacte-participar {
+    margin-top: 100px;
+    padding: 45px;
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 18px;
+}
+
+.contacte-participar>p,
+.contacte-musics>p,
+.contacte-final>p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+
+.requisit {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    background: #181818;
+    border-left: 5px solid #ff7800;
+    border-radius: 10px;
+}
+
+.requisit>strong {
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+    color: #ff7800;
+}
+
+.requisit h3 {
+    margin: 0 0 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.requisit p {
+    margin: 0;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+
+/* MÚSICS */
+
+.contacte-musics {
+    margin-top: 70px;
+    padding: 45px;
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 18px;
+}
+
+.requisit-musics {
+    border-left-color: #ff9d2e;
+}
+
+
+/* FINAL */
+
+.contacte-final {
+    margin-top: 70px;
+    text-align: center;
+    padding: 60px 25px;
+}
+
+.contacte-final h2 {
+    font-size: 50px;
+}
+
+.contacte-final .boto {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+
+/* MÒBIL */
+
+@media (max-width: 850px) {
+
+    .contacte {
+        padding: 50px 18px;
+    }
+
+    .contacte h2 {
+        font-size: 32px;
+    }
+
+    .contacte-graella {
+        grid-template-columns: 1fr;
+    }
+
+    .contacte-participar,
+    .contacte-musics {
+        padding: 30px 20px;
+    }
+
+    .requisit {
+        gap: 18px;
+    }
+
+    .requisit>strong {
+        font-size: 38px;
+    }
+
+    .targeta-contacte strong {
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+    .contacte-final h2 {
+        font-size: 40px;
+    }
+}
+
+/* =========================================================
+   ESPURNES REALISTES - PÀGINA CONTACTE
+   ========================================================= */
+
+.contacte {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenidor de totes les espurnes */
+.espurnes-contacte {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Cada espurna */
+.espurnes-contacte span {
+    position: absolute;
+    bottom: -20px;
+    left: var(--left);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: #ffb347;
+    box-shadow:
+        0 0 4px #ff7800,
+        0 0 9px #ff9d2e,
+        0 0 15px rgba(255, 120, 0, 0.65);
+    opacity: 0;
+    animation: espurna-realista var(--duracio) ease-out infinite;
+    animation-delay: var(--retard);
+}
+
+/* Posicions i variacions */
+.espurnes-contacte span:nth-child(1) {
+    --left: 8%;
+    --size: 3px;
+    --duracio: 4.8s;
+    --retard: 0s;
+    --vent: 35px;
+}
+
+.espurnes-contacte span:nth-child(2) {
+    --left: 13%;
+    --size: 2px;
+    --duracio: 5.7s;
+    --retard: 1.8s;
+    --vent: -20px;
+}
+
+.espurnes-contacte span:nth-child(3) {
+    --left: 18%;
+    --size: 4px;
+    --duracio: 4.2s;
+    --retard: 3.2s;
+    --vent: 45px;
+}
+
+.espurnes-contacte span:nth-child(4) {
+    --left: 27%;
+    --size: 2px;
+    --duracio: 6.1s;
+    --retard: 0.9s;
+    --vent: -35px;
+}
+
+.espurnes-contacte span:nth-child(5) {
+    --left: 34%;
+    --size: 3px;
+    --duracio: 5.1s;
+    --retard: 2.6s;
+    --vent: 25px;
+}
+
+.espurnes-contacte span:nth-child(6) {
+    --left: 42%;
+    --size: 2px;
+    --duracio: 4.6s;
+    --retard: 4s;
+    --vent: -25px;
+}
+
+.espurnes-contacte span:nth-child(7) {
+    --left: 51%;
+    --size: 3px;
+    --duracio: 5.8s;
+    --retard: 1.3s;
+    --vent: 40px;
+}
+
+.espurnes-contacte span:nth-child(8) {
+    --left: 59%;
+    --size: 2px;
+    --duracio: 4.4s;
+    --retard: 3.5s;
+    --vent: -45px;
+}
+
+.espurnes-contacte span:nth-child(9) {
+    --left: 67%;
+    --size: 4px;
+    --duracio: 5.3s;
+    --retard: 0.5s;
+    --vent: 30px;
+}
+
+.espurnes-contacte span:nth-child(10) {
+    --left: 73%;
+    --size: 2px;
+    --duracio: 6s;
+    --retard: 2.1s;
+    --vent: -30px;
+}
+
+.espurnes-contacte span:nth-child(11) {
+    --left: 79%;
+    --size: 3px;
+    --duracio: 4.9s;
+    --retard: 3.8s;
+    --vent: 50px;
+}
+
+.espurnes-contacte span:nth-child(12) {
+    --left: 84%;
+    --size: 2px;
+    --duracio: 5.5s;
+    --retard: 1.1s;
+    --vent: -40px;
+}
+
+.espurnes-contacte span:nth-child(13) {
+    --left: 89%;
+    --size: 3px;
+    --duracio: 4.7s;
+    --retard: 2.9s;
+    --vent: 25px;
+}
+
+.espurnes-contacte span:nth-child(14) {
+    --left: 94%;
+    --size: 2px;
+    --duracio: 6.3s;
+    --retard: 4.4s;
+    --vent: -35px;
+}
+
+.espurnes-contacte span:nth-child(15) {
+    --left: 23%;
+    --size: 2px;
+    --duracio: 5.9s;
+    --retard: 4.8s;
+    --vent: 55px;
+}
+
+.espurnes-contacte span:nth-child(16) {
+    --left: 47%;
+    --size: 3px;
+    --duracio: 5s;
+    --retard: 5.5s;
+    --vent: -50px;
+}
+
+.espurnes-contacte span:nth-child(17) {
+    --left: 63%;
+    --size: 2px;
+    --duracio: 4.3s;
+    --retard: 5.9s;
+    --vent: 35px;
+}
+
+.espurnes-contacte span:nth-child(18) {
+    --left: 76%;
+    --size: 3px;
+    --duracio: 5.6s;
+    --retard: 6.2s;
+    --vent: -25px;
+}
+
+.espurnes-contacte span:nth-child(19) {
+    --left: 92%;
+    --size: 2px;
+    --duracio: 4.5s;
+    --retard: 6.8s;
+    --vent: 45px;
+}
+
+
+/* Moviment de l'espurna */
+@keyframes espurna-realista {
+
+    0% {
+        transform:
+            translate(0, 0) scale(0.2);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+        transform:
+            translate(0, -20px) scale(1);
+    }
+
+    25% {
+        opacity: 0.95;
+        transform:
+            translate(calc(var(--vent) * 0.2),
+                -110px) scale(0.9);
+    }
+
+    45% {
+        opacity: 0.8;
+        transform:
+            translate(calc(var(--vent) * 0.45),
+                -210px) scale(0.75);
+    }
+
+    65% {
+        opacity: 0.55;
+        transform:
+            translate(calc(var(--vent) * 0.7),
+                -310px) scale(0.55);
+    }
+
+    82% {
+        opacity: 0.2;
+        transform:
+            translate(calc(var(--vent) * 0.9),
+                -390px) scale(0.3);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(var(--vent),
+                -450px) scale(0);
+    }
+}
+
+
+/* El contingut de contacte queda per sobre de les espurnes */
+.contacte>*:not(.espurnes-contacte) {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Mòbil */
+@media (max-width: 850px) {
+
+    .espurnes-contacte span {
+        box-shadow:
+            0 0 3px #ff7800,
+            0 0 7px #ff9d2e,
+            0 0 11px rgba(255, 120, 0, 0.55);
+    }
+
+}
+
+/* =========================================================
+   PÀGINA NORMES DE SEGURETAT
+   ========================================================= */
+
+.normes-seguretat {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 70px 25px;
+}
+
+
+/* INTRODUCCIÓ */
+
+.seguretat-introduccio {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 70px;
+}
+
+.icona-seguretat {
+    font-size: 55px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 12px rgba(255, 120, 0, 0.6));
+}
+
+.seguretat-introduccio h2 {
+    margin: 0 0 15px;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.seguretat-introduccio p {
+    margin: 0;
+
+    color: #aaa;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+/* BLOCS */
+
+.bloc-normes {
+    margin-bottom: 70px;
+    padding: 40px;
+
+    background: #111;
+
+    border: 1px solid #292929;
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* TÍTOL DEL BLOC */
+
+.titol-normes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.titol-normes span {
+    font-size: 34px;
+
+    filter:
+        drop-shadow(0 0 7px rgba(255, 120, 0, 0.6));
+}
+
+.titol-normes h2 {
+    margin: 0;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+
+/* GRAELLA */
+
+.graella-normes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+
+/* CADA NORMA */
+
+.norma {
+    padding: 22px;
+
+    background: #181818;
+
+    border-left: 4px solid #ff7800;
+    border-radius: 10px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.norma:hover {
+    transform: translateY(-3px);
+
+    border-left-color: #ff9d2e;
+
+    box-shadow:
+        0 0 18px rgba(255, 120, 0, 0.18);
+}
+
+.norma h3 {
+    margin: 0 0 9px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+
+    color: #ff9d2e;
+
+    letter-spacing: 0.5px;
+}
+
+.norma p {
+    margin: 0;
+
+    color: #aaa;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* NORMES D'ALERTA */
+
+.norma.alerta {
+    border-left-color: #ff3b30;
+}
+
+.norma.alerta h3 {
+    color: #ff5b50;
+}
+
+.norma.alerta:hover {
+    border-left-color: #ff6b61;
+
+    box-shadow:
+        0 0 18px rgba(255, 59, 48, 0.15);
+}
+
+
+/* NORMES DEL VEÏNAT */
+
+.bloc-veinat {
+    border-color: #292929;
+}
+
+.norma.veinat {
+    border-left-color: #24b8ff;
+}
+
+.norma.veinat h3 {
+    color: #48c5ff;
+}
+
+.norma.veinat:hover {
+    border-left-color: #70d3ff;
+
+    box-shadow:
+        0 0 18px rgba(36, 184, 255, 0.12);
+}
+
+
+/* RECORDATORI */
+
+.recordatori-seguretat {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin: 60px 0;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(135deg,
+            #211306,
+            #181818);
+
+    border: 1px solid #ff7800;
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 30px rgba(255, 120, 0, 0.12);
+}
+
+.recordatori-icon {
+    flex-shrink: 0;
+
+    font-size: 52px;
+
+    filter:
+        drop-shadow(0 0 12px rgba(255, 120, 0, 0.65));
+}
+
+.recordatori-seguretat h2 {
+    margin: 0 0 8px;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 31px;
+    letter-spacing: 1px;
+}
+
+.recordatori-seguretat p {
+    margin: 0;
+
+    color: #aaa;
+    line-height: 1.6;
+}
+
+
+/* CARTELL ORIGINAL */
+
+.cartell-seguretat {
+    margin-top: 80px;
+
+    text-align: center;
+}
+
+.cartell-seguretat h2 {
+    margin-bottom: 30px;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+.cartell-seguretat img {
+    display: block;
+
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+
+    margin: 0 auto;
+
+    border-radius: 14px;
+    border: 1px solid #292929;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   MÒBIL
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .normes-seguretat {
+        padding: 50px 18px;
+    }
+
+    .seguretat-introduccio {
+        margin-bottom: 50px;
+    }
+
+    .seguretat-introduccio h2 {
+        font-size: 36px;
+    }
+
+    .icona-seguretat {
+        font-size: 45px;
+    }
+
+    .bloc-normes {
+        padding: 25px 18px;
+        margin-bottom: 45px;
+    }
+
+    .titol-normes {
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .titol-normes span {
+        font-size: 27px;
+    }
+
+    .titol-normes h2 {
+        font-size: 30px;
+    }
+
+    .graella-normes {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .norma {
+        padding: 19px;
+    }
+
+    .norma h3 {
+        font-size: 13px;
+    }
+
+    .norma p {
+        font-size: 13px;
+    }
+
+    .recordatori-seguretat {
+        align-items: flex-start;
+        gap: 18px;
+
+        padding: 25px 20px;
+    }
+
+    .recordatori-icon {
+        font-size: 38px;
+    }
+
+    .recordatori-seguretat h2 {
+        font-size: 25px;
+    }
+
+    .recordatori-seguretat p {
+        font-size: 14px;
+    }
+
+    .cartell-seguretat {
+        margin-top: 50px;
+    }
+
+    .cartell-seguretat h2 {
+        font-size: 30px;
+    }
+
+}
+
+/* =========================================================
+   PÀGINA UBICACIÓ
+   ========================================================= */
+
+.ubicacio {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 25px;
+}
+
+
+/* =========================================================
+   INTRODUCCIÓ
+   ========================================================= */
+
+.ubicacio-introduccio {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.ubicacio-introduccio h2 {
+    margin: 0 0 15px;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+    letter-spacing: 1px;
+}
+
+.ubicacio-introduccio p {
+    margin: 6px 0;
+
+    color: #aaa;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+.ubicacio-introduccio strong {
+    color: #ff7800;
+}
+
+
+/* =========================================================
+   MAPA
+   ========================================================= */
+
+.mapa-container {
+    width: 100%;
+    overflow: hidden;
+
+    background: #111;
+
+    border: 1px solid #292929;
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.5);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.mapa-container:hover {
+    border-color: #ff7800;
+
+    box-shadow:
+        0 0 30px rgba(255, 120, 0, 0.15);
+}
+
+.mapa-container iframe {
+    display: block;
+
+    width: 100%;
+    height: 500px;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   INFORMACIÓ DE LA UBICACIÓ
+   ========================================================= */
+
+.ubicacio-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+
+/* Targeta */
+
+.targeta-ubicacio {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    flex: 1;
+
+    padding: 22px 25px;
+
+    background: #181818;
+
+    border: 1px solid #292929;
+    border-radius: 14px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.targeta-ubicacio:hover {
+    transform: translateY(-3px);
+
+    border-color: #ff7800;
+
+    box-shadow:
+        0 0 20px rgba(255, 120, 0, 0.15);
+}
+
+
+/* Icona */
+
+.icona-ubicacio {
+    width: 55px;
+    height: 55px;
+
+    min-width: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ff7800;
+
+    border-radius: 12px;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 0 15px rgba(255, 120, 0, 0.25);
+}
+
+
+/* Text */
+
+.targeta-ubicacio>div>span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #888;
+}
+
+.targeta-ubicacio strong {
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+
+    color: white;
+}
+
+.targeta-ubicacio p {
+    margin: 5px 0 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   BOTÓ GOOGLE MAPS
+   ========================================================= */
+
+.boto-mapa {
+    display: inline-block;
+
+    padding: 16px 25px;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.boto-mapa:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   NOTA FINAL
+   ========================================================= */
+
+.ubicacio-nota {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 50px;
+
+    padding: 25px;
+
+    background: #111;
+
+    border-left: 4px solid #ff7800;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 20px rgba(255, 120, 0, 0.08);
+}
+
+.ubicacio-nota span {
+    flex-shrink: 0;
+
+    font-size: 28px;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 120, 0, 0.5));
+}
+
+.ubicacio-nota p {
+    margin: 0;
+
+    color: #aaa;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MÒBIL
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .ubicacio {
+        padding: 50px 18px;
+    }
+
+
+    .ubicacio-introduccio {
+        margin-bottom: 35px;
+    }
+
+
+    .ubicacio-introduccio h2 {
+        font-size: 36px;
+    }
+
+
+    .ubicacio-introduccio p {
+        font-size: 14px;
+    }
+
+
+    /* Mapa */
+
+    .mapa-container {
+        border-radius: 14px;
+    }
+
+    .mapa-container iframe {
+        height: 400px;
+    }
+
+
+    /* Informació */
+
+    .ubicacio-info {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 15px;
+    }
+
+
+    .targeta-ubicacio {
+        padding: 20px;
+    }
+
+
+    .targeta-ubicacio strong {
+        font-size: 16px;
+    }
+
+
+    /* Botó */
+
+    .boto-mapa {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* Nota */
+
+    .ubicacio-nota {
+        align-items: flex-start;
+
+        padding: 20px;
+
+        margin-top: 35px;
+    }
+
+    .ubicacio-nota span {
+        font-size: 24px;
+    }
+
+}
+
+/* =========================================================
+   MENÚ - NORMES DE SEGURETAT EN UNA SOLA LÍNIA
+   ========================================================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.menu a {
+    white-space: nowrap;
+}
+
+.menu a[href="normes-seguretat.html"] {
+    min-width: 145px;
+    text-align: center;
+}
+
+/* =========================================
+   GALERIA
+   ========================================= */
+
+.galeria {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 25px;
+}
+
+
+/* =========================================
+   INTRODUCCIÓ
+   ========================================= */
+
+.galeria-introduccio {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+
+.icona-galeria {
+    font-size: 55px;
+    margin-bottom: 10px;
+
+    filter:
+        drop-shadow(0 0 12px rgba(255, 120, 0, 0.6));
+}
+
+
+.galeria-introduccio h2 {
+    margin: 0 0 15px;
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: 48px;
+
+    letter-spacing: 1px;
+}
+
+
+.galeria-introduccio p {
+    margin: 0;
+
+    color: #aaa;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================
+   PRIMERA GALERIA
+   FOTOS 4, 5 I 6
+   ========================================= */
+
+.galeria-fotos-principals {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 100px;
+}
+
+
+
+/* =========================================
+   FOTOS PRINCIPALS
+   ========================================= */
+
+.foto-galeria {
+
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    border: 1px solid #292929;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.4);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.foto-galeria img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+.foto-galeria:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        #ff7800;
+
+    box-shadow:
+        0 0 20px rgba(255, 120, 0, 0.25),
+
+        0 0 40px rgba(255, 120, 0, 0.10);
+}
+
+
+.foto-galeria:hover img {
+
+    transform:
+        scale(1.08);
+
+    filter:
+        brightness(1.08);
+}
+
+
+.foto-galeria::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 120, 0, 0.15),
+            transparent 45%,
+            rgba(255, 120, 0, 0.08));
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease;
+
+    pointer-events: none;
+}
+
+
+.foto-galeria:hover::after {
+
+    opacity: 1;
+
+}
+
+
+
+/* =========================================
+   CARRUSEL
+   ========================================= */
+
+.galeria-carrusel {
+
+    position: relative;
+
+    margin-top: 30px;
+}
+
+
+
+/* TÍTOL */
+
+.titol-carrusel {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 35px;
+}
+
+
+.titol-carrusel span {
+
+    font-size: 32px;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 120, 0, 0.7));
+}
+
+
+.titol-carrusel h2 {
+
+    margin: 0;
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: 42px;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* =========================================
+   ZONA DEL CARRUSEL
+   ========================================= */
+
+.carrusel {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+}
+
+
+
+/* =========================================
+   TRES FOTOS
+   ========================================= */
+
+.carrusel-fotos {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 18px;
+
+    overflow: hidden;
+
+    padding: 30px 0;
+}
+
+
+
+/* =========================================
+   FOTOS DEL CARRUSEL
+   ========================================= */
+
+.foto-carrusel {
+
+    position: relative;
+
+    flex: 0 0 28%;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    border: 1px solid #292929;
+
+    background: #111;
+
+    opacity: 0.55;
+
+    transform:
+        scale(0.88);
+
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+
+    cursor: pointer;
+}
+
+
+.foto-carrusel img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+
+/* =========================================
+   FOTO CENTRAL DESTACADA
+   ========================================= */
+
+.foto-carrusel.foto-centre {
+
+    flex: 0 0 36%;
+
+    height: 390px;
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+
+    border:
+        2px solid #ff7800;
+
+    box-shadow:
+
+        0 0 25px rgba(255, 120, 0, 0.35),
+
+        0 0 55px rgba(255, 120, 0, 0.12);
+
+    z-index: 3;
+}
+
+
+.foto-carrusel.foto-centre:hover img {
+
+    transform:
+        scale(1.06);
+}
+
+
+
+/* =========================================
+   FOTOS LATERALS
+   ========================================= */
+
+.foto-carrusel.foto-esquerra,
+.foto-carrusel.foto-dreta {
+
+    z-index: 1;
+}
+
+
+.foto-carrusel.foto-esquerra:hover,
+.foto-carrusel.foto-dreta:hover {
+
+    opacity: 0.75;
+
+    transform:
+        scale(0.92);
+
+    border-color:
+        #ff7800;
+}
+
+
+
+/* =========================================
+   FLETXES
+   ========================================= */
+
+.fletxa-carrusel {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        2px solid #ff7800;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.fletxa-carrusel:hover {
+
+    background:
+        #ff7800;
+
+    color:
+        #000;
+
+    box-shadow:
+        0 0 20px rgba(255, 120, 0, 0.5);
+
+    transform:
+        translateY(-50%) scale(1.08);
+}
+
+
+.fletxa-esquerra {
+
+    left: 0;
+}
+
+
+.fletxa-dreta {
+
+    right: 0;
+}
+
+
+
+/* =========================================
+   INDICADORS
+   ========================================= */
+
+.indicadors-carrusel {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+.indicador {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        #444;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.indicador.actiu {
+
+    background:
+        #ff7800;
+
+    transform:
+        scale(1.5);
+
+    box-shadow:
+        0 0 10px rgba(255, 120, 0, 0.7);
+}
+
+
+
+/* =========================================
+   VISOR DE FOTO GRAN
+   ========================================= */
+
+.visor-foto {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    background:
+        rgba(0, 0, 0, 0.94);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    z-index: 9999;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+.visor-foto.obert {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+#foto-gran {
+
+    display: block;
+
+    max-width: 92vw;
+
+    max-height: 88vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    border:
+        2px solid #ff7800;
+
+    box-shadow:
+
+        0 0 25px rgba(255, 120, 0, 0.45),
+
+        0 0 70px rgba(255, 120, 0, 0.15);
+
+    transform:
+        scale(0.94);
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.visor-foto.obert #foto-gran {
+
+    transform:
+        scale(1);
+}
+
+
+
+/* =========================================
+   BOTÓ TANCAR
+   ========================================= */
+
+.tancar-visor {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border:
+        2px solid #ff7800;
+
+    border-radius: 50%;
+
+    background:
+        #111;
+
+    color:
+        white;
+
+    font-size: 35px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.tancar-visor:hover {
+
+    background:
+        #ff7800;
+
+    color:
+        #000;
+
+    transform:
+        rotate(90deg);
+}
+
+
+
+/* =========================================
+   BLOQUEJAR SCROLL AMB FOTO GRAN
+   ========================================= */
+
+body.visor-actiu {
+
+    overflow: hidden;
+}
+
+
+
+/* =========================================
+   MÒBIL
+   ========================================= */
+
+@media (max-width: 850px) {
+
+
+    .galeria {
+
+        padding:
+            50px 18px;
+    }
+
+
+    .galeria-introduccio {
+
+        margin-bottom:
+            40px;
+    }
+
+
+    .icona-galeria {
+
+        font-size:
+            45px;
+    }
+
+
+    .galeria-introduccio h2 {
+
+        font-size:
+            36px;
+    }
+
+
+    .galeria-introduccio p {
+
+        font-size:
+            14px;
+    }
+
+
+
+    /* FOTOS 4, 5 I 6 */
+
+    .galeria-fotos-principals {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            12px;
+
+        margin-bottom:
+            70px;
+    }
+
+
+    .foto-galeria {
+
+        height:
+            220px;
+
+        border-radius:
+            10px;
+    }
+
+
+
+    /* TÍTOL CARRUSEL */
+
+    .titol-carrusel {
+
+        margin-bottom:
+            20px;
+    }
+
+
+    .titol-carrusel h2 {
+
+        font-size:
+            32px;
+    }
+
+
+    .titol-carrusel span {
+
+        font-size:
+            25px;
+    }
+
+
+
+    /* CARRUSEL */
+
+    .carrusel-fotos {
+
+        gap:
+            8px;
+
+        padding:
+            20px 0;
+    }
+
+
+    .foto-carrusel {
+
+        flex:
+            0 0 25%;
+
+        height:
+            190px;
+
+        border-radius:
+            10px;
+    }
+
+
+    .foto-carrusel.foto-centre {
+
+        flex:
+            0 0 50%;
+
+        height:
+            270px;
+    }
+
+
+
+    /* FLETXES */
+
+    .fletxa-carrusel {
+
+        width:
+            43px;
+
+        height:
+            43px;
+
+        font-size:
+            32px;
+    }
+
+
+    .fletxa-esquerra {
+
+        left:
+            -5px;
+    }
+
+
+    .fletxa-dreta {
+
+        right:
+            -5px;
+    }
+
+
+
+    /* VISOR */
+
+    .visor-foto {
+
+        padding:
+            20px;
+    }
+
+
+    #foto-gran {
+
+        max-width:
+            95vw;
+
+        max-height:
+            82vh;
+    }
+
+
+    .tancar-visor {
+
+        top:
+            15px;
+
+        right:
+            15px;
+
+        width:
+            44px;
+
+        height:
+            44px;
+
+        font-size:
+            30px;
+    }
+
+}

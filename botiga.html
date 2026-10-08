@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Botiga | Les Cabres de Sant Procopi</title>
+
+    <link rel="stylesheet" href="css/estil.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- ========================================
+         CAPÇALERA
+    ========================================= -->
+
+    <header class="capcalera">
+
+        <a href="index.html" class="logo">
+
+            <img src="imatges/logo.png" alt="Les Cabres de Sant Procopi">
+
+        </a>
+
+
+        <nav class="menu">
+
+            <a href="index.html">INICI</a>
+            <a href="associacio.html">ASSOCIACIÓ</a>
+            <a href="calendari.html">CALENDARI</a>
+            <a href="activitats.html">ACTIVITATS</a>
+            <a href="galeria.html">GALERIA</a>
+            <a href="botiga.html">BOTIGA</a>
+            <a href="normes de seguretat.html">NORMES DE SEGURETAT</a>
+            <a href="ubicacio.html">UBICACIÓ</a>
+            <a href="contacte.html">CONTACTE</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ========================================
+         CAPÇALERA DE PÀGINA
+    ========================================= -->
+
+    <section class="capcalera-pagina">
+
+        <h1>BOTIGA</h1>
+
+        <p>
+            PRODUCTES OFICIALS DE LES CABRES DE SANT PROCOPI
+        </p>
+
+    </section>
+
+
+    <!-- ========================================
+         BOTIGA
+    ========================================= -->
+
+    <main class="botiga">
+
+        <div class="botiga-introduccio">
+
+            <h2>
+                PRODUCTES OFICIALS
+            </h2>
+
+            <p>
+                Porta Les Cabres de Sant Procopi amb tu.
+            </p>
+
+        </div>
+
+
+        <!-- PRODUCTES -->
+
+        <div id="productes-botiga" class="graella-productes">
+
+            <!-- Els productes es generen amb JavaScript -->
+
+        </div>
+
+    </main>
+
+
+    <!-- ========================================
+         CARRÉT
+    ========================================= -->
+
+    <aside id="carret" class="carret">
+
+        <div class="carret-capcalera">
+
+            <h2>
+                🛒 EL TEU CARRET
+            </h2>
+
+            <button id="tancar-carret" class="tancar-carret" aria-label="Tancar carret">
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="productes-carret" class="productes-carret">
+
+            <p class="carret-buit">
+                El carret està buit.
+            </p>
+
+        </div>
+
+
+        <div class="carret-total">
+
+            <span>
+                TOTAL
+            </span>
+
+            <strong id="total-carret">
+                0,00 €
+            </strong>
+
+        </div>
+
+
+        <button id="boto-comanda" class="boto boto-comanda">
+            FER COMANDA
+        </button>
+
+    </aside>
+
+
+    <!-- FONS DEL CARRÉT -->
+
+    <div id="fons-carret" class="fons-carret"></div>
+
+
+    <!-- BOTÓ FLOTANT DEL CARRÉT -->
+
+    <button id="boto-carret" class="boto-carret" aria-label="Obrir carret">
+
+        🛒
+
+        <span id="numero-carret">
+            0
+        </span>
+
+    </button>
+
+
+    <!-- ========================================
+         PEU DE PÀGINA
+    ========================================= -->
+
+    <footer class="peu">
+
+        <p>
+            © 2026 Les Cabres de Sant Procopi
+        </p>
+
+        <p>
+            La Pobla de Claramunt
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+    <script src="js/botiga.js"></script>
+
+</body>
+
+</html>
