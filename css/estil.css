@@ -4899,3 +4899,212 @@ body.visor-actiu {
     }
 
 }
+
+/* =========================================
+   PÀGINA LOTERIA DE NADAL
+   LES CABRES DE SANT PROCOPI
+========================================= */
+
+.pagina-loteria {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 25px 90px;
+}
+
+/* PRESENTACIÓ */
+
+.loteria-presentacio {
+    max-width: 800px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.loteria-icona {
+    font-size: 60px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 12px rgba(255, 120, 0, 0.45));
+}
+
+.loteria-etiqueta {
+    color: #ff7800;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.loteria-presentacio h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(34px, 5vw, 55px);
+    line-height: 1.15;
+    margin: 0 0 25px;
+}
+
+.loteria-presentacio h2 span {
+    color: #ff7800;
+}
+
+.loteria-descripcio {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #c5c5c5;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* NÚMERO */
+
+.loteria-boto-numero {
+    max-width: 440px;
+    margin: 0 auto 30px;
+    padding: 30px 20px;
+    background: linear-gradient(145deg, #1b1b1b, #101010);
+    border: 2px solid #ff7800;
+    border-radius: 18px;
+    box-shadow:
+        0 0 25px rgba(255, 120, 0, 0.15),
+        inset 0 0 20px rgba(255, 120, 0, 0.04);
+}
+
+.loteria-numero-etiqueta {
+    display: block;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.loteria-numero {
+    margin: 15px 0;
+    color: #ff7800;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(52px, 10vw, 82px);
+    letter-spacing: 8px;
+    line-height: 1.2;
+    text-shadow: 0 0 20px rgba(255, 120, 0, 0.2);
+}
+
+.loteria-numero-peu {
+    display: block;
+    color: #ddd;
+    font-size: 13px;
+}
+
+/* BOTÓ D'INSTAGRAM */
+
+.loteria-boto-instagram {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 16px 25px;
+    background: #ff7800;
+    color: #111;
+    border: 2px solid #ff7800;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.loteria-boto-instagram:hover {
+    background: transparent;
+    color: #ff7800;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 120, 0, 0.2);
+}
+
+.loteria-nota {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 18px;
+}
+
+/* TARGETES INFORMATIVES */
+
+.loteria-informacio {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.loteria-targeta {
+    padding: 30px 24px;
+    text-align: center;
+    background: #141414;
+    border: 1px solid #2b2b2b;
+    border-radius: 14px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.loteria-targeta:hover {
+    transform: translateY(-5px);
+    border-color: #ff7800;
+}
+
+.loteria-targeta>span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.loteria-targeta h3 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.loteria-targeta p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ADAPTACIÓ A MÒBILS */
+
+@media (max-width: 750px) {
+    .pagina-loteria {
+        padding: 45px 18px 60px;
+    }
+
+    .loteria-presentacio {
+        margin-bottom: 50px;
+    }
+
+    .loteria-descripcio {
+        font-size: 14px;
+    }
+
+    .loteria-boto-numero {
+        padding: 25px 15px;
+    }
+
+    .loteria-numero {
+        letter-spacing: 5px;
+    }
+
+    .loteria-boto-instagram {
+        max-width: 100%;
+        font-size: 12px;
+        padding: 15px 18px;
+    }
+
+    .loteria-informacio {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .loteria-targeta {
+        padding: 25px 20px;
+    }
+}
