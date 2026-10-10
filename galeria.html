@@ -2,170 +2,594 @@
 <html lang="ca">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Galeria | Les Cabres de Sant Procopi</title>
 
     <link rel="stylesheet" href="css/estil.css">
 
-    <style>
-        .galeria-contenidor {
-            width: min(1100px, 92%);
-            margin: 40px auto;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .galeria-contenidor h2 {
-            color: #ff7a1a;
-            margin: 35px 0 20px;
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-        .galeria-fotos {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 20px;
-        }
-
-        .galeria-fotos a {
-            display: block;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .galeria-fotos img {
-            display: block;
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .galeria-fotos a:hover img {
-            transform: scale(1.04);
-        }
-
-        .contenidor-carrusel {
-            display: grid;
-            grid-template-columns: auto minmax(0, 750px) auto;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px auto 50px;
-        }
-
-        .carrusel-fotos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            min-width: 0;
-        }
-
-        .foto-carrusel {
-            display: none;
-            width: 100%;
-            max-height: 480px;
-            object-fit: contain;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-
-        .foto-carrusel.activa {
-            display: block;
-        }
-
-        .contenidor-carrusel button {
-            background: #ff7a1a;
-            color: white;
-            border: none;
-            padding: 12px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-
-        .contenidor-carrusel button:hover {
-            background: #d95e0d;
-        }
-
-        .missatge-error {
-            color: #ff9a58;
-            text-align: center;
-            padding: 15px;
-        }
-
-        @media (max-width: 700px) {
-            .galeria-fotos {
-                grid-template-columns: 1fr;
-            }
-
-            .galeria-fotos img {
-                height: 240px;
-            }
-
-            .contenidor-carrusel {
-                grid-template-columns: auto minmax(0, 1fr) auto;
-                gap: 8px;
-            }
-
-            .contenidor-carrusel button {
-                padding: 9px 11px;
-            }
-        }
-    </style>
 </head>
+
 
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="imatges/logo.png" alt="Les Cabres de Sant Procopi" class="logo-img">
-            </a>
 
-            <ul>
-                <li><a href="index.html">Inici</a></li>
-                <li><a href="associacio.html">Qui som</a></li>
-                <li><a href="activitats.html">Activitats</a></li>
-                <li><a href="galeria.html" class="actiu">Galeria</a></li>
-                <li><a href="botiga.html">La nostra botiga</a></li>
-                <li><a href="loteria.html">Loteria</a></li>
-                <li><a href="contacte.html">Contacte</a></li>
-                <li><a href="ubicacio.html">Ubicació</a></li>
-                <li><a href="normes.html">Normes de seguretat</a></li>
-            </ul>
+    <header class="capcalera">
+
+        <a href="index.html" class="logo">
+
+            <img src="imatges/logo.png" alt="Les Cabres de Sant Procopi">
+
+        </a>
+
+
+        <nav class="menu">
+
+            <a href="index.html">INICI</a>
+            <a href="associacio.html">ASSOCIACIÓ</a>
+            <a href="calendari.html">CALENDARI</a>
+            <a href="activitats.html">ACTIVITATS</a>
+            <a href="galeria.html">GALERIA</a>
+            <a href="botiga.html">BOTIGA</a>
+            <a href="loteria.html">LOTERIA</a>
+            <a href="normes de seguretat.html">NORMES DE SEGURETAT</a>
+            <a href="ubicacio.html">UBICACIÓ</a>
+            <a href="contacte.html">CONTACTE</a>
+
         </nav>
+
     </header>
 
-    <main>
-        <section class="galeria-contenidor">
-            <h1>Galeria</h1>
 
-            <h2>Els nostres moments</h2>
 
-            <div id="galeria-fotos" class="galeria-fotos"></div>
+    <section class="capcalera-pagina">
 
-            <h2>Més fotografies</h2>
+        <h1>
+            GALERIA
+        </h1>
 
-            <div class="contenidor-carrusel">
-                <button id="foto-anterior" type="button" aria-label="Fotografia anterior">
-                    &#10094;
-                </button>
+        <p>
+            MOMENTS DE LES CABRES DE SANT PROCOPI
+        </p>
 
-                <div id="carrusel-fotos" class="carrusel-fotos"></div>
+    </section>
 
-                <button id="foto-seguent" type="button" aria-label="Fotografia següent">
-                    &#10095;
-                </button>
+
+
+    <main class="galeria">
+
+
+        <!-- =========================================
+         INTRODUCCIÓ
+         ========================================= -->
+
+        <section class="galeria-introduccio">
+
+            <div class="icona-galeria">
+                📸
             </div>
+
+            <h2>
+                ELS NOSTRES MOMENTS
+            </h2>
+
+            <p>
+                Una petita mostra dels moments, activitats i correfocs
+                viscuts amb Les Cabres de Sant Procopi.
+            </p>
+
         </section>
+
+
+
+        <!-- =========================================
+         PRIMERA GALERIA
+         FOTOS 4, 5 I 6
+         ========================================= -->
+
+        <section class="galeria-fotos-principals">
+
+
+            <article class="foto-galeria" onclick="obrirFoto(this)">
+
+                <img src="imatges/foto4.jpg" alt="Les Cabres de Sant Procopi">
+
+            </article>
+
+
+            <article class="foto-galeria" onclick="obrirFoto(this)">
+
+                <img src="imatges/foto5.jpg" alt="Les Cabres de Sant Procopi">
+
+            </article>
+
+
+            <article class="foto-galeria" onclick="obrirFoto(this)">
+
+                <img src="imatges/foto6.jpg" alt="Les Cabres de Sant Procopi">
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+         SEGONA GALERIA
+         CARRUSEL FOTOS 7, 8, 9, 10 I 11
+         ========================================= -->
+
+        <section class="galeria-carrusel">
+
+
+            <div class="titol-carrusel">
+
+                <span>
+                    🔥
+                </span>
+
+                <h2>
+                    MÉS MOMENTS
+                </h2>
+
+            </div>
+
+
+
+            <div class="carrusel">
+
+
+                <!-- FLETXA ESQUERRA -->
+
+                <button class="fletxa-carrusel fletxa-esquerra" onclick="fotoAnterior()" aria-label="Foto anterior">
+
+                    ‹
+
+                </button>
+
+
+
+                <!-- FOTOS DEL CARRUSEL -->
+
+                <div class="carrusel-fotos" id="carrusel-fotos">
+
+
+                    <!-- FOTO ESQUERRA -->
+
+                    <article class="foto-carrusel foto-esquerra">
+
+                        <img src="imatges/foto11.jpg" alt="Les Cabres de Sant Procopi">
+
+                    </article>
+
+
+
+                    <!-- FOTO CENTRAL -->
+
+                    <article class="foto-carrusel foto-centre">
+
+                        <img src="imatges/foto7.jpg" alt="Les Cabres de Sant Procopi">
+
+                    </article>
+
+
+
+                    <!-- FOTO DRETA -->
+
+                    <article class="foto-carrusel foto-dreta">
+
+                        <img src="imatges/foto8.jpg" alt="Les Cabres de Sant Procopi">
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- FLETXA DRETA -->
+
+                <button class="fletxa-carrusel fletxa-dreta" onclick="fotoSeguent()" aria-label="Foto següent">
+
+                    ›
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- INDICADORS -->
+
+            <div class="indicadors-carrusel" id="indicadors-carrusel">
+
+                <span class="indicador actiu"></span>
+
+                <span class="indicador"></span>
+
+                <span class="indicador"></span>
+
+                <span class="indicador"></span>
+
+                <span class="indicador"></span>
+
+            </div>
+
+
+        </section>
+
+
     </main>
 
-    <footer>
-        <p>&copy; Les Cabres de Sant Procopi</p>
+
+
+    <!-- =========================================
+     VISOR DE FOTO GRAN
+     ========================================= -->
+
+    <div class="visor-foto" id="visor-foto" onclick="tancarFoto()">
+
+
+        <button class="tancar-visor" onclick="event.stopPropagation(); tancarFoto()">
+
+            ×
+
+        </button>
+
+
+        <img id="foto-gran" src="" alt="Fotografia ampliada">
+
+
+    </div>
+
+
+
+    <!-- =========================================
+     FOOTER
+     ========================================= -->
+
+    <footer class="peu">
+
+        <p>
+            © 2026 Les Cabres de Sant Procopi
+        </p>
+
+        <p>
+            La Pobla de Claramunt
+        </p>
+
     </footer>
 
-    <script src="galeria.js"></script>
+
+
+    <script src="js/script.js"></script>
+
+
+
+    <!-- =========================================
+     JAVASCRIPT DE LA GALERIA
+     ========================================= -->
+
+    <script>
+
+
+        /* =========================================
+           VARIABLES DEL CARRUSEL
+           ========================================= */
+
+        let fotoActual = 0;
+
+
+        const fotosCarrusel = [
+
+            "imatges/foto7.jpg",
+
+            "imatges/foto8.jpg",
+
+            "imatges/foto9.jpg",
+
+            "imatges/foto10.jpg",
+
+            "imatges/foto11.jpg"
+
+        ];
+
+
+
+        /* =========================================
+           OBRIR UNA FOTO EN GRAN
+           Aquesta funció serveix per a les fotos
+           4, 5 i 6.
+           ========================================= */
+
+        function obrirFoto(element) {
+
+
+            const imatge =
+                element.querySelector("img");
+
+
+            const visor =
+                document.getElementById(
+                    "visor-foto"
+                );
+
+
+            const fotoGran =
+                document.getElementById(
+                    "foto-gran"
+                );
+
+
+            fotoGran.src =
+                imatge.src;
+
+
+            fotoGran.alt =
+                imatge.alt;
+
+
+            visor.classList.add(
+                "obert"
+            );
+
+
+            document.body.classList.add(
+                "visor-actiu"
+            );
+
+        }
+
+
+
+        /* =========================================
+           ACTUALITZAR CARRUSEL
+           ========================================= */
+
+        function actualitzarCarrusel() {
+
+
+            const fotoEsquerra =
+                document.querySelector(
+                    ".foto-esquerra img"
+                );
+
+
+            const fotoCentre =
+                document.querySelector(
+                    ".foto-centre img"
+                );
+
+
+            const fotoDreta =
+                document.querySelector(
+                    ".foto-dreta img"
+                );
+
+
+            const total =
+                fotosCarrusel.length;
+
+
+            const indexEsquerra =
+                (fotoActual - 1 + total) % total;
+
+
+            const indexCentre =
+                fotoActual;
+
+
+            const indexDreta =
+                (fotoActual + 1) % total;
+
+
+            fotoEsquerra.src =
+                fotosCarrusel[indexEsquerra];
+
+
+            fotoCentre.src =
+                fotosCarrusel[indexCentre];
+
+
+            fotoDreta.src =
+                fotosCarrusel[indexDreta];
+
+
+            /* Actualitzar indicadors */
+
+            const indicadors =
+                document.querySelectorAll(
+                    ".indicador"
+                );
+
+
+            indicadors.forEach(
+                (indicador, index) => {
+
+                    indicador.classList.toggle(
+                        "actiu",
+                        index === fotoActual
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =========================================
+           FOTO ANTERIOR
+           ========================================= */
+
+        function fotoAnterior() {
+
+
+            fotoActual--;
+
+
+            if (fotoActual < 0) {
+
+                fotoActual =
+                    fotosCarrusel.length - 1;
+
+            }
+
+
+            actualitzarCarrusel();
+
+        }
+
+
+
+        /* =========================================
+           FOTO SEGÜENT
+           ========================================= */
+
+        function fotoSeguent() {
+
+
+            fotoActual++;
+
+
+            if (
+                fotoActual >=
+                fotosCarrusel.length
+            ) {
+
+                fotoActual = 0;
+
+            }
+
+
+            actualitzarCarrusel();
+
+        }
+
+
+
+        /* =========================================
+           CLICAR LA FOTO CENTRAL
+           ========================================= */
+
+        const fotoCentral =
+            document.querySelector(
+                ".foto-centre"
+            );
+
+
+        fotoCentral.addEventListener(
+            "click",
+            function () {
+
+
+                const imatge =
+                    this.querySelector("img");
+
+
+                const visor =
+                    document.getElementById(
+                        "visor-foto"
+                    );
+
+
+                const fotoGran =
+                    document.getElementById(
+                        "foto-gran"
+                    );
+
+
+                fotoGran.src =
+                    imatge.src;
+
+
+                fotoGran.alt =
+                    imatge.alt;
+
+
+                visor.classList.add(
+                    "obert"
+                );
+
+
+                document.body.classList.add(
+                    "visor-actiu"
+                );
+
+            }
+        );
+
+
+
+        /* =========================================
+           TANCAR FOTO GRAN
+           ========================================= */
+
+        function tancarFoto() {
+
+
+            const visor =
+                document.getElementById(
+                    "visor-foto"
+                );
+
+
+            visor.classList.remove(
+                "obert"
+            );
+
+
+            document.body.classList.remove(
+                "visor-actiu"
+            );
+
+        }
+
+
+
+        /* =========================================
+           TANCAR AMB ESC
+           ========================================= */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    tancarFoto();
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================================
+           INICIAR CARRUSEL
+           ========================================= */
+
+        actualitzarCarrusel();
+
+
+    </script>
+
 
 </body>
 
