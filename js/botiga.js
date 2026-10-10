@@ -34,7 +34,7 @@ const productes = [
     {
         id: "adhesius",
         nom: "Adhesius",
-        preu: 1.5,
+        preu: 1,
         imatge: "imatges/Adhesiu.jpg"
     }
 ];
