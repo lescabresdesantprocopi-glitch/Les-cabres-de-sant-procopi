@@ -1,3 +1,4 @@
+
 /* ========================================
    CALENDARI
    LES CABRES DE SANT PROCOPI
@@ -27,6 +28,21 @@ const activitats = {
 
     },
 
+    "2026-10-13": {
+
+        titol: "Comença la loteria de Nadal",
+
+        hora: "Del 13 d’octubre al 8 de desembre",
+
+        lloc: "La Pobla de Claramunt",
+
+        descripcio:
+            "🎄 Comença la loteria de Nadal de Les Cabres de Sant Procopi! " +
+            "La podreu aconseguir del 13 d’octubre al 8 de desembre de 2026.",
+
+        enllac: "loteria.html"
+
+    },
 
     "2026-10-17": {
 
@@ -209,7 +225,6 @@ function generarCalendari() {
         const elementDia =
             document.createElement("button");
 
-
         elementDia.classList.add(
             "dia"
         );
@@ -232,11 +247,37 @@ function generarCalendari() {
 
 
         /* =================================
+           LOTERIA DE NADAL
+        ================================= */
+
+        const esLoteriaNadal =
+            dataClau >= "2026-10-13" &&
+            dataClau <= "2026-12-08";
+
+
+        /* La loteria es marca amb decoració nadalenca,
+           excepte quan hi ha una altra activitat
+           que té prioritat, com el Correfoc. */
+
+        if (
+            esLoteriaNadal &&
+            !activitats[dataClau]
+        ) {
+
+            elementDia.classList.add(
+                "dia-loteria-nadal"
+            );
+
+        }
+
+
+        /* =================================
            ACTIVITAT
         ================================= */
 
         if (
-            activitats[dataClau]
+            activitats[dataClau] ||
+            esLoteriaNadal
         ) {
 
             elementDia.classList.add(
@@ -364,6 +405,14 @@ function generarCalendari() {
             "click",
             function () {
 
+                document.querySelectorAll(
+                    "#dies-calendari .dia.seleccionat"
+                ).forEach(function (diaSeleccionat) {
+                    diaSeleccionat.classList.remove("seleccionat");
+                });
+
+                elementDia.classList.add("seleccionat");
+
                 mostrarInformacio(
                     dataClau,
                     dia
@@ -404,16 +453,45 @@ function mostrarInformacio(
 
 
     /* ====================================
+       INFORMACIÓ DE LA LOTERIA
+    ==================================== */
+
+    const loteriaNadal = {
+
+        titol: "Loteria de Nadal",
+
+        hora: "Del 13 d’octubre al 8 de desembre",
+
+        lloc: "La Pobla de Claramunt",
+
+        descripcio:
+            "🎄 Loteria de Nadal de Les Cabres de Sant Procopi! " +
+            "La podreu aconseguir del 13 d’octubre al 8 de desembre de 2026.",
+
+        enllac: "loteria.html"
+
+    };
+
+
+    const esLoteriaNadal =
+        dataClau >= "2026-10-13" &&
+        dataClau <= "2026-12-08";
+
+
+    /* Una activitat específica sempre té prioritat
+       sobre la loteria. Així, el 17 d'octubre
+       es mostra el Correfoc. */
+
+    const activitat =
+        activitats[dataClau] ||
+        (esLoteriaNadal ? loteriaNadal : null);
+
+
+    /* ====================================
        HI HA ACTIVITAT
     ==================================== */
 
-    if (
-        activitats[dataClau]
-    ) {
-
-        const activitat =
-            activitats[dataClau];
-
+    if (activitat) {
 
         informacioActivitat.innerHTML = `
 

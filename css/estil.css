@@ -5138,3 +5138,28 @@ body:not(:has(.portada)) .pagina-activitats {
 body:not(:has(.portada)) .pagina-activitats {
     min-height: 100vh;
 }
+
+/* DECORACIÓ NADALENCA DEL DIA DE LA LOTERIA */
+.dia.dia-loteria-nadal {
+    background: linear-gradient(135deg, #b5121b, #146b35);
+    border: 3px solid #d4af37;
+    color: white;
+    position: relative;
+}
+
+.dia.dia-loteria-nadal::after {
+    content: "🎄";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 10px;
+}
+
+/* DIA SELECCIONAT AL CALENDARI */
+.dia.seleccionat {
+    background: #ff6600;
+    color: white;
+    border: 2px solid white;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
