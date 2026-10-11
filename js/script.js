@@ -1,4 +1,5 @@
 
+
 /* ========================================
    CALENDARI
    LES CABRES DE SANT PROCOPI
@@ -486,6 +487,9 @@ function mostrarInformacio(
         activitats[dataClau] ||
         (esLoteriaNadal ? loteriaNadal : null);
 
+    const mostrarLoteriaJuntamentAmbCorrefoc =
+        dataClau === "2026-10-17";
+
 
     /* ====================================
        HI HA ACTIVITAT
@@ -495,9 +499,9 @@ function mostrarInformacio(
 
         informacioActivitat.innerHTML = `
 
-            <div class="icona-calendari">
-                🎆
-            </div>
+          <div class="icona-calendari">
+    ${dataClau === "2026-10-17" ? "🎆" : (dataClau >= "2026-10-13" && dataClau <= "2026-12-08") ? "🎄" : "🎆"}
+</div>
 
             <h2>
                 ${activitat.titol}
@@ -539,9 +543,34 @@ function mostrarInformacio(
                 MÉS INFORMACIÓ
             </a>
 
+            ${mostrarLoteriaJuntamentAmbCorrefoc ? `
+                    <div class="detalls-activitat">
+                        <h2>🎄 LOTERIA DE NADAL</h2>
+                        <p>
+                            <strong>📅 Data:</strong>
+                            Del 13 d’octubre al 8 de desembre de 2026
+                        </p>
+                        <p>
+                            <strong>📍 Lloc:</strong>
+                            La Pobla de Claramunt
+                        </p>
+                        <p>
+                            Loteria de Nadal de Les Cabres de Sant Procopi!
+                        </p>
+                        <a
+                            href="loteria.html"
+                            class="boto boto-calendari-enllac"
+                        >
+                            MÉS INFORMACIÓ DE LA LOTERIA
+                        </a>
+                    </div>
+                ` : ""
+            }
+
         `;
 
     }
+
 
 
     /* ====================================
