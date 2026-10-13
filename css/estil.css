@@ -5163,3 +5163,166 @@ body:not(:has(.portada)) .pagina-activitats {
     transform: scale(1.05);
     transition: all 0.2s ease;
 }
+
+/* ========================================
+   RECORREGUT DEL CORREFOC
+======================================== */
+
+.seccio-recorregut {
+    padding: 90px 25px;
+    background: rgba(8, 8, 8, 0.65);
+}
+
+.recorregut-contingut {
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.recorregut-contingut h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(45px, 7vw, 75px);
+    letter-spacing: 3px;
+    color: #ff8c00;
+    margin: 18px 0;
+}
+
+.recorregut-contingut>p {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.recorregut-mapa {
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #ff7800;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(255, 120, 0, 0.18);
+}
+
+.recorregut-mapa img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Adaptació a mòbils */
+
+@media (max-width: 750px) {
+    .seccio-recorregut {
+        padding: 60px 15px;
+    }
+
+    .recorregut-contingut>p {
+        font-size: 14px;
+    }
+
+    .recorregut-mapa {
+        border-radius: 10px;
+    }
+}
+
+/* ========================================
+   DJ I MAPA EN PARAL·LEL
+======================================== */
+
+.seccio-dj-recorregut {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 90px 35px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 45px;
+
+    align-items: center;
+}
+
+/* BLOC DEL DJ */
+
+.seccio-dj-recorregut .dj-contingut {
+    max-width: 100%;
+    text-align: center;
+}
+
+.seccio-dj-recorregut .dj-contingut h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(65px, 6vw, 110px);
+    line-height: 0.9;
+    letter-spacing: 4px;
+    margin: 25px 0;
+    color: white;
+}
+
+.seccio-dj-recorregut .dj-contingut p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* BLOC DEL MAPA */
+
+.seccio-dj-recorregut .recorregut-contingut {
+    min-width: 0;
+    text-align: center;
+}
+
+.seccio-dj-recorregut .recorregut-contingut h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 3vw, 48px);
+    letter-spacing: 2px;
+    color: #ff8c00;
+    margin: 15px 0 25px;
+}
+
+.seccio-dj-recorregut .recorregut-mapa {
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #ff7800;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 0 30px rgba(255, 120, 0, 0.18);
+}
+
+.seccio-dj-recorregut .recorregut-mapa img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ADAPTACIÓ A MÒBILS */
+
+@media (max-width: 850px) {
+    .seccio-dj-recorregut {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        padding: 65px 18px;
+    }
+
+    .seccio-dj-recorregut .dj-contingut h2 {
+        font-size: 75px;
+    }
+
+    .seccio-dj-recorregut .recorregut-contingut h2 {
+        font-size: 38px;
+    }
+}
+
+/* REDUIR L'ESPAI ABANS DEL DJ I EL RECORREGUT */
+
+.seccio-dj-recorregut {
+    padding-top: 25px;
+    padding-bottom: 60px;
+    margin-top: 0;
+}
+
+/* REDUIR L'ESPAI DE LA SECCIÓ ANTERIOR */
+
+.contingut-correfoc {
+    padding-bottom: 25px;
+}
